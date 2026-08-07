@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaxel Random</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">⚗️</div>
+            <h1>Yaxel Random</h1>
+            <p class="tagline">A tiny machine for when your brain runs out of ideas</p>
+        </div>
+
+        <!-- Category Selection -->
+        <div class="categories">
+            <p class="label">What do you need?</p>
+            <div class="button-grid">
+                <button class="category-btn" data-category="business">💡 Business idea</button>
+                <button class="category-btn" data-category="content">✍🏽 Content idea</button>
+                <button class="category-btn" data-category="gift">🎁 Gift idea</button>
+                <button class="category-btn" data-category="study">📚 Study idea</button>
+                <button class="category-btn" data-category="meal">🍝 Meal idea</button>
+                <button class="category-btn" data-category="brand">🏷️ Brand name</button>
+                <button class="category-btn" data-category="surprise">🎲 Surprise me</button>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div class="result-section" id="resultSection" style="display: none;">
+            <div class="result-box">
+                <p class="result-label">Your idea:</p>
+                <p class="result-text" id="resultText"></p>
+            </div>
+
+            <!-- Generate Again Button -->
+            <button class="generate-btn" id="generateAgainBtn">GENERATE AGAIN →</button>
+
+            <!-- Reset Button -->
+            <button class="reset-btn" id="resetBtn">← Back to categories</button>
+        </div>
+
+        <!-- Loading State -->
+        <div class="loading" id="loading" style="display: none;">
+            <p>✨</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>We code everything.</p>
+            <p><strong>yaxel</strong></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+  </html>
